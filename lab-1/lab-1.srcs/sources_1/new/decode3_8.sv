@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2021/04/02 13:19:56
+// Create Date: 2021/04/02 15:20:00
 // Design Name: 
-// Module Name: decoder_1
+// Module Name: decode3_8
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,27 +20,26 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module decoder_1(
+module decode3_8(
    input [2:0] decode,
    input [2:0] enable,
-   output [7:0] res
+   output logic [7:0] res
 );
 
 always_comb begin
-   if (enable = 3'b100) {
-      case (decode):
-         3'b000: output = 11111110
-         3'b001: output = 11111101
-         3'b010: output = 11111011
-         3'b011: output = 11110111
-         3'b100: output = 11101111
-         3'b101: output = 11011111
-         3'b110: output = 10111111
-         3'b111: output = 01111111
-   }else {
-      output = 8'b11111111
-   }
-
+   if (enable == 3'b100) begin
+    case (decode)
+        3'b000: res = 11111110;
+        3'b001: res = 11111101;
+        3'b010: res = 11111011;
+        3'b011: res = 11110111;
+        3'b100: res = 11101111;
+        3'b101: res = 11011111;
+        3'b110: res = 10111111;
+        3'b111: res = 01111111;
+    endcase
+     end
+   else res = 8'b11111111;
 end
 
 endmodule
