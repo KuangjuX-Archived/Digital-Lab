@@ -22,19 +22,20 @@
 
 module voter5_tb();
     logic a,b,c,d,e;
-    logic [4:0] input_tb [32: 0];
-    voter5 test (.I({a, b, b, d, e}));
-    int i;
+    logic y;
+    voter5 test (.referee({a, b, b, d, e}), .led(y));
 
-    initial begin
-        $readmemb("test.txt", input_tb);
-        for (i = 0; i < 32; i++)begin
-            {a, b, c, d, e} = input_tb[i]; #10;
-        end
+    initial begin 
+        a=0;b=0;c=0;d=0;e=0; #10;
+        e=1; #10;
+        d=1; #10;
+        c=1; #10;
+        b=1; #10;
+        a=1; #10;
     end
 
     initial begin
-        $monitor($time, "a = %b, b = %b, c = %b, d = %b, e = %b", a, b, c, d, e);
+        $monitor($time, "a = %b, b = %b, c = %b, d = %b, e = %b, y = %b", a, b, c, d, e, y);
     end
 
 endmodule

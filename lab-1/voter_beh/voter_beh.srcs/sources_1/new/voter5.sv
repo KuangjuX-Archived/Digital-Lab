@@ -21,19 +21,19 @@
 
 
 module voter5(
-    input logic [4:0] I,
+    input logic [4:0] referee,
     output logic led
     );
     always_comb begin
         int bits = 0;
         int i;
         for (i = 0; i < 5; i++)begin
-            if (I[i] == 1) bits = bits + 1;
+            if (referee[i] == 1) bits = bits + 1;
             else bits = bits;
         end
 
-        if (bits > 2) led = 1;
-        else led = 1;
+        if (bits >= 3) led = 1;
+        else led = 0;
     end
 
 endmodule
