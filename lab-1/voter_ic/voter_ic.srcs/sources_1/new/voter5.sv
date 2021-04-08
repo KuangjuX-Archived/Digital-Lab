@@ -28,7 +28,7 @@ module voter5(
     logic [7:0] a, b, c, d;
 
     // Use 2_4 decoder to 2 judger
-    dec_74LS139 decode_24_1 (.S(1), .D({referee[0], referee[1]}), .Y(Y));
+    dec_74LS139 decode_24_1 (.S(0), .D({referee[0], referee[1]}), .Y(Y));
 
     // 3-8 decode to 3 judger
     dec_74LS138 decode_38_1 (.decode({referee[4], referee[3], referee[2]}), .enable({1, Y[3], Y[3]}), .res(a));
