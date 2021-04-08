@@ -68,5 +68,5 @@ module voter5(
     end
 
     // ouput res
-    assign led = tmp_1 | tmp_2 | tmp_3 | tmp_4
+    assign led = tmp_1 | tmp_2 | tmp_3 | tmp_4;
 endmodule
