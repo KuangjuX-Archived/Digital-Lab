@@ -23,7 +23,7 @@
 module voter5_tb();
     logic a,b,c,d,e;
     logic y;
-    voter5 test (.referee({a, b, b, d, e}), .led(y));
+    voter5 test (.referee({a, b, c, d, e}), .led(y));
 
     initial begin 
         a=0;b=0;c=0;d=0;e=0; #10;
@@ -59,7 +59,7 @@ module voter5_tb();
         a=1;b=1;c=1;d=0;e=1; #10;
         a=1;b=1;c=1;d=1;e=0; #10;
         a=1;b=1;c=1;d=1;e=1; #10;
-
+//          a=1;b=0;c=1;d=0;e=1; #10;
     end
 
     initial begin
