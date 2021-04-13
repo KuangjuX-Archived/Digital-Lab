@@ -13,4 +13,12 @@ WARNING: [VRFC 10-278] actual bit length 34 differs from formal bit length 3 for
 WARNING: [VRFC 10-278] actual bit length 34 differs from formal bit length 3 for port enable [D:/Build-My-Own/Digital-Lab/lab-1/voter_ic/voter_ic.srcs/sources_1/new/voter5.sv:36]
 WARNING: [VRFC 10-278] actual bit length 34 differs from formal bit length 3 for port enable [D:/Build-My-Own/Digital-Lab/lab-1/voter_ic/voter_ic.srcs/sources_1/new/voter5.sv:37]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.dec_74LS139
+Compiling module xil_defaultlib.dec_74LS138
+Compiling module xil_defaultlib.voter5
+Compiling module xil_defaultlib.voter5_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot voter5_tb_behav
