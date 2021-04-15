@@ -1,11 +1,9 @@
 0.6
-2017.3
-Oct  4 2017
-20:11:37
-D:/Work/vivado_project/DLC/ALU_4bits/ALU_4bits.sim/sim_1/behav/xsim/glbl.v,1507081072,verilog,,,,glbl,,xil_defaultlib,,,,,,
-D:/Work/vivado_project/DLC/ALU_4bits/ALU_4bits.srcs/sim_1/imports/DLC/ALU_4bits_tb.sv,1617955763,systemVerilog,,,,ALU_4bits_tb,,xil_defaultlib,D:/Xilinx/Vivado/2017.3/data/xilinx_vip/include,,,,,
-D:/Work/vivado_project/DLC/ALU_4bits/ALU_4bits.srcs/sources_1/imports/DLC/ALU_4bits.sv,1617953449,systemVerilog,,D:/Work/vivado_project/DLC/ALU_4bits/ALU_4bits.srcs/sources_1/imports/DLC/alu.sv,,ALU_4bits,,xil_defaultlib,D:/Xilinx/Vivado/2017.3/data/xilinx_vip/include,,,,,
-D:/Work/vivado_project/DLC/ALU_4bits/ALU_4bits.srcs/sources_1/imports/DLC/alu.sv,1617894362,systemVerilog,,D:/Work/vivado_project/DLC/ALU_4bits/ALU_4bits.srcs/sources_1/imports/DLC/fulladder.sv,,alu,,xil_defaultlib,D:/Xilinx/Vivado/2017.3/data/xilinx_vip/include,,,,,
-D:/Work/vivado_project/DLC/ALU_4bits/ALU_4bits.srcs/sources_1/imports/DLC/fulladder.sv,1617851145,systemVerilog,,D:/Work/vivado_project/DLC/ALU_4bits/ALU_4bits.srcs/sources_1/imports/DLC/rca.sv,,fulladder,,xil_defaultlib,D:/Xilinx/Vivado/2017.3/data/xilinx_vip/include,,,,,
-D:/Work/vivado_project/DLC/ALU_4bits/ALU_4bits.srcs/sources_1/imports/DLC/rca.sv,1617891564,systemVerilog,,D:/Work/vivado_project/DLC/ALU_4bits/ALU_4bits.srcs/sim_1/imports/DLC/ALU_4bits_tb.sv,,rca,,xil_defaultlib,D:/Xilinx/Vivado/2017.3/data/xilinx_vip/include,,,,,
-D:/Work/vivado_project/DLC/ALU_4bits/ALU_4bits.srcs/sources_1/imports/DLC/x7seg_d_port.sv,1617953185,systemVerilog,,D:/Work/vivado_project/DLC/ALU_4bits/ALU_4bits.srcs/sim_1/imports/DLC/ALU_4bits_tb.sv,,x7seg_d,,xil_defaultlib,D:/Xilinx/Vivado/2017.3/data/xilinx_vip/include,,,,,
+2018.2
+Jun 14 2018
+20:41:02
+D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.sim/sim_1/behav/xsim/glbl.v,1507081072,verilog,,,,glbl,,,,,,,,
+D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sim_1/new/fulladdr_tb.sv,1618456815,systemVerilog,,,,fulladdr_tb,,,,,,,,
+D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sim_1/new/rca_tb.sv,1618458568,systemVerilog,,,,rca_tb,,,,,,,,
+D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sources_1/new/fulladder.sv,1618451006,systemVerilog,,D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sources_1/new/rca.sv,,fulladder,,,,,,,,
+D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sources_1/new/rca.sv,1618457888,systemVerilog,,D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sim_1/new/rca_tb.sv,,rca,,,,,,,,

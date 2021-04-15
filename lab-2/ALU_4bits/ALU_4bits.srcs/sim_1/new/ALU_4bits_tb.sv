@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2021/04/15 08:29:40
+// Create Date: 2021/04/15 10:27:09
 // Design Name: 
-// Module Name: fulladder
+// Module Name: ALU_4bits_tb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,12 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module fulladder(
-    input logic A,
-    input logic B,
-    input logic C_in,
-    output logic S,
-    output logic C_out
+module ALU_4bits_tb(
+
     );
-    assign {C_out, S} = A + B + C_in;
 endmodule

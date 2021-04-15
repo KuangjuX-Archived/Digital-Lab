@@ -1,8 +1,7 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Work/vivado_project/DLC/ALU_4bits/ALU_4bits.srcs/sources_1/imports/DLC/alu.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module alu
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Work/vivado_project/DLC/ALU_4bits/ALU_4bits.srcs/sources_1/imports/DLC/fulladder.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sources_1/new/fulladder.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module fulladder
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Work/vivado_project/DLC/ALU_4bits/ALU_4bits.srcs/sources_1/imports/DLC/rca.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sources_1/new/rca.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module rca
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Work/vivado_project/DLC/ALU_4bits/ALU_4bits.srcs/sim_1/imports/DLC/ALU_4bits_tb.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_4bits_tb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sim_1/new/rca_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rca_tb
+WARNING: [VRFC 10-463] cannot select r inside r due to dimension mismatch [D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sim_1/new/rca_tb.sv:28]
