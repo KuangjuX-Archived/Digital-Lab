@@ -21,19 +21,10 @@
 
 
 module voter5(
-    input logic [4:0] referee,
+    input logic [4:0] L,
     output logic led
     );
-    always_comb begin
-        int bits = 0;
-        int i;
-        for (i = 0; i < 5; i++)begin
-            if (referee[i] == 1) bits = bits + 1;
-            else bits = bits;
-        end
-
-        if (bits >= 3) led = 1;
-        else led = 0;
-    end
-
+    assign led = (L[0]&L[1]&L[2])||(L[0]&L[1]&L[3])||(L[0]&L[1]&L[4])
+    ||(L[0]&L[2]&L[3])||(L[0]&L[2]&L[4])||(L[0]&L[3]&L[4])||(L[1]&L[2]&L[3])
+    ||(L[1]&L[2]&L[4])||(L[1]&L[3]&L[4])||(L[2]&L[3]&L[4]);
 endmodule

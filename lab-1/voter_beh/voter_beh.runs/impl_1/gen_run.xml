@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tftg256-1" LaunchTime="1618313097">
+<GenRun Id="impl_1" LaunchPart="xc7a35tftg256-1" LaunchTime="1618398837">
   <File Type="BITSTR-BMM" Name="voter5_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="voter5_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="voter5_timing_summary_init.rpt"/>
@@ -86,7 +86,7 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/new/vetor5_ct.xdc">
+    <File Path="$PSRCDIR/constrs_1/new/voter_ct.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
