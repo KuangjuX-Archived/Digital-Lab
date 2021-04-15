@@ -1,0 +1,23 @@
+Vivado Simulator 2017.3
+Time resolution is 1 ps
+At time   0ns: A = 1011, B = 0110, aluop= 0000, alures = 00000010, ov = 0, zero = 0
+At time  50ns: A = 1011, B = 0110, aluop= 0001, alures = 00001111, ov = 0, zero = 0
+At time 100ns: A = 1011, B = 0110, aluop= 0010, alures = 00001101, ov = 0, zero = 0
+At time 150ns: A = 1011, B = 0110, aluop= 0011, alures = 00001101, ov = 0, zero = 0
+At time 200ns: A = 1011, B = 0110, aluop= 0100, alures = 00000100, ov = 0, zero = 0
+At time 250ns: A = 1011, B = 0011, aluop= 0101, alures = 00001000, ov = 0, zero = 0
+At time 300ns: A = 1011, B = 0011, aluop= 0110, alures = 00000001, ov = 0, zero = 0
+At time 350ns: A = 1011, B = 0011, aluop= 0111, alures = 00001111, ov = 0, zero = 0
+At time 400ns: A = 1011, B = 0110, aluop= 1000, alures = 01000010, ov = 0, zero = 0
+At time 450ns: A = 1011, B = 0110, aluop= 1001, alures = 11100010, ov = 0, zero = 0
+At time 500ns: A = 1011, B = 1010, aluop= 1001, alures = 00011110, ov = 0, zero = 0
+At time 550ns: A = 1101, B = 1011, aluop= 1010, alures = 00001000, ov = 0, zero = 0
+At time 600ns: A = 1101, B = 1010, aluop= 1010, alures = 00000111, ov = 1, zero = 0
+At time 650ns: A = 1010, B = 0101, aluop= 1011, alures = 00001111, ov = 0, zero = 0
+At time 700ns: A = 1010, B = 0110, aluop= 1011, alures = 00000000, ov = 0, zero = 1
+At time 750ns: A = 1101, B = 0101, aluop= 1100, alures = 00001000, ov = 0, zero = 0
+At time 800ns: A = 1101, B = 0110, aluop= 1100, alures = 00000111, ov = 1, zero = 0
+At time 850ns: A = 1101, B = 1101, aluop= 1100, alures = 00000000, ov = 0, zero = 1
+At time 900ns: A = 1010, B = 1001, aluop= 1101, alures = 00000001, ov = 0, zero = 0
+At time 950ns: A = 1010, B = 1011, aluop= 1101, alures = 00001111, ov = 0, zero = 0
+At time 1000ns: A = 1010, B = 1010, aluop= 1101, alures = 00000000, ov = 0, zero = 1
