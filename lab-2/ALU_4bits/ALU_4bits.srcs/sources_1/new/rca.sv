@@ -21,15 +21,17 @@
 
 // ripple-carry adder
 module rca(
-    input logic A [3:0],
-    input logic B [3:0],
-    output logic res [7:0]
+    input logic cin,
+    input logic [3:0] A ,
+    input logic [3:0] B ,
+    output logic [3:0] res,
+    input logic cout 
     );
     logic a, b, c;
     
     // 4 bits adder
-    fulladder bit_0 (.A(A[0]), .B(B[0]), .C_in(0), .S(res[0]), .C_out(a));
+    fulladder bit_0 (.A(A[0]), .B(B[0]), .C_in(cin), .S(res[0]), .C_out(a));
     fulladder bit_1 (.A(A[1]), .B(B[1]), .C_in(a), .S(res[1]), .C_out(b));
     fulladder bit_2 (.A(A[2]), .B(B[2]), .C_in(b), .S(res[2]), .C_out(c));
-    fulladder bit_3 (.A(A[3]), .B(B[3]), .C_in(c), .S(res[3]), .C_out(res[4]));
+    fulladder bit_3 (.A(A[3]), .B(B[3]), .C_in(c), .S(res[3]), .C_out(cout));
 endmodule
