@@ -35,7 +35,7 @@ module alu(
     
     logic [3:0] sub_res;
     logic sub_out;
-    rca sub (.cin(0), .A(A), .B({!B[3], B[2:0]}), .res(sub_res), .cout(sub_out));
+    rca sub (.cin(1), .A(A), .B(~B), .res(sub_res), .cout(sub_out));
     
     always_comb begin
         unique case(aluop)
@@ -59,9 +59,8 @@ module alu(
             // ADD
             4'b1010: 
                 begin
-                    alures[3:0] = add_res;
-                    alures[4] = add_out; 
-                    OF = add_out;   
+                    alures[3:0] = add_res; 
+                    OF = (A[3] == B[3] && alures[3] != A[3]) ? 1:0;   
                 end
            // ADDU
             4'b1011:
@@ -72,17 +71,19 @@ module alu(
             // SUB
             4'b1100:
                 begin
+                    alures[3:0] = sub_res;
+                    OF = (A[3] == B[3] && alures[3] != A[3]) ? 1:0;
                 end
            // SUBU
            4'b1101:
                begin
+                    alures[3:0] = sub_res;
+                    alures[4] = sub_out;
                end
            // SLT
            4'b1110:
                begin
-                    automatic reg signed [3:0] signed_a = A;
-                    automatic reg signed [3:0] signed_b = B;
-                    alures = signed_a < signed_b ? 7'b1:'0;
+                    alures = signed'(A) < signed'(B) ? 7'b1:'0;
                end
            // SLTU
            4'b1111:
