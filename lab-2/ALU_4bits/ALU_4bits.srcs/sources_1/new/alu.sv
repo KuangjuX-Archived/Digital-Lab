@@ -77,6 +77,7 @@ module alu(
            // SUBU
            4'b1101:
                begin
+                    $display("not B: %d", ~B);
                     alures[3:0] = sub_res;
                     alures[4] = sub_out;
                end

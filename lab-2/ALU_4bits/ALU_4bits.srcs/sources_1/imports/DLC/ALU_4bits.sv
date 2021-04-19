@@ -22,4 +22,13 @@ module ALU_4bits(
     .a_to_g     (a_to_g)
     );  
     
+    alu U2(
+        .A(A),
+        .B(B),
+        .aluop(aluop),
+        .alures({alures1,alures0}),
+        .OF(ov),
+        .ZF(zero)
+    );
+    
 endmodule
