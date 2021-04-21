@@ -1,9 +1,0 @@
-0.6
-2018.2
-Jun 14 2018
-20:41:02
-D:/Build-My-Own/Digital-Lab/lab-1/voter_ic/voter_ic.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
-D:/Build-My-Own/Digital-Lab/lab-1/voter_ic/voter_ic.srcs/sim_1/new/voter5_tb.sv,1618275215,systemVerilog,,,,voter5_tb,,,,,,,,
-D:/Build-My-Own/Digital-Lab/lab-1/voter_ic/voter_ic.srcs/sources_1/new/dec_74LS138.sv,1618275551,systemVerilog,,D:/Build-My-Own/Digital-Lab/lab-1/voter_ic/voter_ic.srcs/sources_1/new/dec_74LS139.sv,,dec_74LS138,,,,,,,,
-D:/Build-My-Own/Digital-Lab/lab-1/voter_ic/voter_ic.srcs/sources_1/new/dec_74LS139.sv,1617352240,systemVerilog,,D:/Build-My-Own/Digital-Lab/lab-1/voter_ic/voter_ic.srcs/sources_1/new/voter5.sv,,dec_74LS139,,,,,,,,
-D:/Build-My-Own/Digital-Lab/lab-1/voter_ic/voter_ic.srcs/sources_1/new/voter5.sv,1618274741,systemVerilog,,D:/Build-My-Own/Digital-Lab/lab-1/voter_ic/voter_ic.srcs/sim_1/new/voter5_tb.sv,,voter5,,,,,,,,
