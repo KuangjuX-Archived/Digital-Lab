@@ -3,11 +3,11 @@
 Jun 14 2018
 20:41:02
 D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.sim/sim_1/behav/xsim/glbl.v,1507081072,verilog,,,,glbl,,,,,,,,
-D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sim_1/new/ALU_4bits_tb.sv,1618969934,systemVerilog,,,,ALU_4bits_tb,,,,,,,,
+D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sim_1/new/ALU_4bits_tb.sv,1618971869,systemVerilog,,,,ALU_4bits_tb,,,,,,,,
 D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sim_1/new/fulladdr_tb.sv,1618456815,systemVerilog,,,,fulladdr_tb,,,,,,,,
 D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sim_1/new/rca_tb.sv,1618714121,systemVerilog,,,,rca_tb,,,,,,,,
 D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sources_1/imports/DLC/ALU_4bits.sv,1617959142,systemVerilog,,,,ALU_4bits,,,,,,,,
 D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sources_1/imports/DLC/x7seg_d_port.sv,1617953185,systemVerilog,,D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sources_1/imports/DLC/ALU_4bits.sv,,x7seg_d,,,,,,,,
-D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sources_1/new/alu.sv,1618970119,systemVerilog,,D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sources_1/new/fulladder.sv,,alu,,,,,,,,
+D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sources_1/new/alu.sv,1618971658,systemVerilog,,D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sources_1/new/fulladder.sv,,alu,,,,,,,,
 D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sources_1/new/fulladder.sv,1618451006,systemVerilog,,D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sources_1/new/rca.sv,,fulladder,,,,,,,,
 D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sources_1/new/rca.sv,1618713823,systemVerilog,,D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.srcs/sim_1/new/ALU_4bits_tb.sv,,rca,,,,,,,,

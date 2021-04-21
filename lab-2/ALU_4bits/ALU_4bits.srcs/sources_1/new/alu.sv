@@ -42,65 +42,50 @@ module alu(
             4'b0000: alures = A & B;    // AND
             4'b0001: alures = A | B;    // OR
             4'b0010: alures = A ^ B;    // XOR
-            4'b0011: alures = ~(A & B); // NAND
-            4'b0100: alures = ~A;       // NOT
-            4'b0101: begin alures = A << B; alures[7:4] = 4'd0;  end // SLL
-            4'b0110: begin alures = A >> B; alures[7:4] = 4'd0;  end // SRL
-            4'b0111: begin alures = A >>> B;  alures[7:4] = 4'd0; end // SRA
+            4'b0011: begin alures = ~(A & B); alures[7:4] = 4'd0; end // NAND
+            4'b0100: begin alures = ~A; alures[7:4] = 4'd0; end       // NOT
+            4'b0101: begin alures = A << B;  alures[7:4] = 4'd0;  end // SLL
+            4'b0110: begin alures = A >> B;  alures[7:4] = 4'd0;  end // SRL
+            4'b0111: begin alures = A >>> B; alures[7:4] = 4'd0;  end // SRA
             4'b1000: alures = A * B;    // MULU
             // MUL
             4'b1001:
                 begin
-                    automatic logic sign = ~(A[3]^B[3]);
+                    automatic logic sign = A[3]^B[3];
                     automatic logic [2:0] int_a = A[2:0];
-                    automatic logic [3:0] int_b = B[2:0];
-                    automatic logic [6:0] mut_res = int_a * int_b;
-                    alures = {sign, mut_res};
+                    automatic logic [2:0] int_b = B[2:0];
+                    automatic logic [6:0] mul_res = int_a * int_b;
+                    alures = {sign, mul_res};
                 end
             // ADD
             4'b1010: 
                 begin
-                    $display("add result: %b", add_res);
                     alures[3:0] = add_res;
                     alures[7:4] = 4'd0;
                     OF = ~(A[3]^B[3])&(alures[3]^A[3]);   
                 end
-           // ADDU
-            4'b1011:
+            // ADDU
+            4'b1011: 
                 begin
-                    $display("add result: %b", add_res);
                     alures[3:0] = add_res;
                     alures[7:4] = 4'd0;
-                    alures[4] = add_out;  
                 end
             // SUB
             4'b1100:
                 begin
-                    $display("sub result: %b", sub_res);
                     alures[3:0] = sub_res;
                     alures[7:4] = 4'd0;
                     OF = (A[3]^B[3])&(A[3]^alures[3]);
                 end
            // SUBU
-           4'b1101:
-               begin
-                    $display("sub result: %b", sub_res);
+           4'b1101: 
+                begin
                     alures[3:0] = sub_res;
                     alures[7:4] = 4'd0;
-               end
-           // SLT
-           4'b1110:
-               begin
-                    alures = signed'(A) < signed'(B) ? 7'b1:'0;
-                    alures[7:4] = 4'd0;
-               end
-           // SLTU
-           4'b1111:
-               begin
-                    alures = A < B ? 7'b1: '0;
-                    alures[7:4] = 4'd0;
-               end
-            default: alures = '0;
+                end
+           4'b1110: alures = signed'(A) < signed'(B) ? 7'b1:'0; // SLT
+           4'b1111: alures = A < B ? 7'b1: '0;  // SLTU
+           default: alures = '0;    // default
         endcase
     end
     // zero
