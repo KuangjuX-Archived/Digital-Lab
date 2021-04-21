@@ -61,33 +61,32 @@ module alu(
             4'b1010: 
                 begin
                     $display("add result: %b", add_res);
-                    alures[7:4] = 4'd0;
                     alures[3:0] = add_res;
+                    alures[7:4] = 4'd0;
                     OF = ~(A[3]^B[3])&(alures[3]^A[3]);   
                 end
            // ADDU
             4'b1011:
                 begin
                     $display("add result: %b", add_res);
-                    alures[7:4] = 4'd0;
                     alures[3:0] = add_res;
+                    alures[7:4] = 4'd0;
                     alures[4] = add_out;  
                 end
             // SUB
             4'b1100:
                 begin
                     $display("sub result: %b", sub_res);
-                    alures[7:4] = 4'd0;
                     alures[3:0] = sub_res;
+                    alures[7:4] = 4'd0;
                     OF = (A[3]^B[3])&(A[3]^alures[3]);
                 end
            // SUBU
            4'b1101:
                begin
                     $display("sub result: %b", sub_res);
-                    alures[7:4] = 4'd0;
                     alures[3:0] = sub_res;
-                    alures[4] = sub_out;
+                    alures[7:4] = 4'd0;
                end
            // SLT
            4'b1110:
