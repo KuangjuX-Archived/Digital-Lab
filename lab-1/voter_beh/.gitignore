@@ -1,4 +1,4 @@
 *
 */
 !.gitignore
-!voter_beh.srcs/*
+!voter_beh.srcs
