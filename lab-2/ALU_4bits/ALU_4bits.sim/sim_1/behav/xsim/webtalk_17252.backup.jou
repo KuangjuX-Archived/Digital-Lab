@@ -2,11 +2,11 @@
 # Webtalk v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Apr 18 10:34:22 2021
-# Process ID: 4604
+# Start of session at: Tue Apr 20 22:27:55 2021
+# Process ID: 17252
 # Current directory: D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.sim/sim_1/behav/xsim/xsim.dir/rca_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.sim/sim_1/behav/xsim/xsim.dir/ALU_4bits_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.sim/sim_1/behav/xsim/xsim.dir/rca_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+source D:/Build-My-Own/Digital-Lab/lab-2/ALU_4bits/ALU_4bits.sim/sim_1/behav/xsim/xsim.dir/ALU_4bits_tb_behav/webtalk/xsim_webtalk.tcl -notrace
