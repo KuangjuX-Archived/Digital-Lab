@@ -1,4 +1,5 @@
-*
-*/
-!.gitignore
-!ALU_4bits.srcs
+ALU_4bits.cache/*
+ALU_4bits.hw/*
+ALU_4bits.ip_user_files/*
+ALU_4bits.runs/*
+ALU_4bits.sim/*
