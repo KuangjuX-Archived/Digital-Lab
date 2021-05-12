@@ -1,0 +1,5 @@
+dig_clock.cache/*
+dig_clock.hw/*
+dig_clock.ip_user_files/*
+dig_clock.runs/*
+dig_clock.sim/*
