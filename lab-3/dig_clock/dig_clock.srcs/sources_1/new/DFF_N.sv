@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2021/05/15 21:49:31
+// Create Date: 2021/05/16 14:10:53
 // Design Name: 
-// Module Name: clk_en
+// Module Name: DFF_N
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,20 +20,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module clk_en #(parameter N = 25000) (
+module DFF_N (
     input sys_clk,
-    output logic clk_out
+    input i_start,
+    output logic pos_edge
     );
 
-    int count;
-    initial begin 
-        count = 0;
-        clk_out = 0;
-    end
-
+    logic dff0_Q;
+    logic dff1_Q;
     always_ff@(posedge sys_clk)
-        if(count < N) count <= count + 1;
-        else count <= 0;
+        if(i_start) dff0_Q <= 1;
+        else if(!i_start) dff0_Q <= 0;
+    assign pos_edge = dff0_Q;
 
-    assign clk_out = (count == N-1)?(!clk_out):clk_out;
 endmodule
