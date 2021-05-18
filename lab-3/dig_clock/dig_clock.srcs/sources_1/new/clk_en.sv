@@ -32,9 +32,9 @@ module clk_en #(parameter N = 25000) (
         clk_out = 0;
     end
     always_ff@(posedge sys_clk)
-        if(count < N) count <= count + 1;
-        else begin 
-            count <= 0;
-        end
+        if(count < N && sys_rst_n) count <= count + 1;
+        else if(sys_rst_n && count <= N) count <= 0;
+        else if(!sys_rst_n) count <= 0;
+        
     assign clk_out = (count == N-1)?(!clk_out):clk_out;
 endmodule

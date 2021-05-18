@@ -30,8 +30,9 @@ module DFF_N (
     logic dff0_Q;
     logic dff1_Q;
     always_ff@(posedge sys_clk)
-        if(i_start) dff0_Q <= 1;
-        else if(!i_start) dff0_Q <= 0;
+        if(i_start && sys_rst_n) dff0_Q <= 1;
+        else if(!i_start && sys_rst_n) dff0_Q <= 0;
+        else if(!sys_rst_n) dff0_Q <= 0;
     assign start_flag = dff0_Q;
 
 endmodule
