@@ -22,8 +22,9 @@
 
 module DFF_N (
     input sys_clk,
+    input sys_rst_n,
     input i_start,
-    output logic pos_edge
+    output logic start_flag
     );
 
     logic dff0_Q;
@@ -31,6 +32,6 @@ module DFF_N (
     always_ff@(posedge sys_clk)
         if(i_start) dff0_Q <= 1;
         else if(!i_start) dff0_Q <= 0;
-    assign pos_edge = dff0_Q;
+    assign start_flag = dff0_Q;
 
 endmodule
