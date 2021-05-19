@@ -29,7 +29,7 @@ module timing #(parameter MAX_SEC = 59, MAX_MIN = 59) (
     );
     
 
-    always_ff@(posedge sys_clk, posedge sys_rst_n, posedge i_start)
+    always_ff@(posedge sys_clk, posedge i_start)
         // reset 
         if(!sys_rst_n) begin
             min = 8'd0;
@@ -38,8 +38,7 @@ module timing #(parameter MAX_SEC = 59, MAX_MIN = 59) (
 
         // timing
         else if(i_start && sys_rst_n) begin 
-            sec = sec + 1;
-            if(sec == 60) begin  
+            if(sec == MAX_SEC) begin  
                 min <= min + 1;
                 sec <= 0;
             end
