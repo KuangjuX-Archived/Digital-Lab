@@ -34,12 +34,12 @@ module dig_clock(
         .sec (sec)
     );
 
-    bin2bcd U3(
+    bin2bcd_0 U3(
         .bin (min),
         .bcd (bcd_min)
     );
 
-    bin2bcd U4(
+    bin2bcd_0 U4(
         .bin (sec),
         .bcd (bcd_sec)
     );
