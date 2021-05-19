@@ -29,9 +29,14 @@ module clk_en #(parameter N = 10) (
     logic [31 : 0] count;
     
     always_ff@(posedge sys_clk)
-        if(count < N && sys_rst_n) count <= count + 1;
-        else if(sys_rst_n && count <= N) count <= 0;
+        if(count < N-1 && sys_rst_n) count <= count + 1;
+        else if(sys_rst_n && count == N-1) count <= 0;
         else if(!sys_rst_n) count <= 0;
-        
-    assign clk_out = (count == N-1)?(~clk_out):clk_out;
+
+
+    always@(*) begin
+        if(sys_rst_n && count == 0) clk_out = ~clk_out;
+        else if(sys_rst_n && count > 0) clk_out = clk_out;
+        else if(!sys_rst_n) clk_out = 0;
+    end
 endmodule
