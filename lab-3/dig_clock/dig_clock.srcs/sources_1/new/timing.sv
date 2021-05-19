@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module timing #(parameter MAX_SEC = 59, MAX_MIN = 59) (
+module timing #(parameter MAX_SEC = 59, MAX_MIN = 59, MAX_COUNT = 25000000) (
     input sys_clk, 
     input sys_rst_n,
     input i_start,
@@ -28,8 +28,12 @@ module timing #(parameter MAX_SEC = 59, MAX_MIN = 59) (
     output logic [7:0] sec
     );
     
+    int count;
+    initial begin
+        count = 0;
+    end
 
-    always_ff@(posedge sys_clk, posedge i_start)
+    always_ff@(posedge sys_clk)
         // reset 
         if(!sys_rst_n) begin
             min = 8'd0;
@@ -38,9 +42,15 @@ module timing #(parameter MAX_SEC = 59, MAX_MIN = 59) (
 
         // timing
         else if(i_start && sys_rst_n) begin 
-            if(sec == MAX_SEC) begin  
-                min <= min + 1;
-                sec <= 0;
+            if (count < MAX_COUNT - 1) count <= count + 1;
+            else if(count == MAX_COUNT - 1) begin  
+                count <= 0;
+                if(sec == MAX_SEC) begin 
+                    sec <= 0;
+                    min <= min + 1;
+                end
+
+                else if(sec < MAX_SEC) sec <= sec + 1;
             end
         end
 
