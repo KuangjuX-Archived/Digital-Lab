@@ -20,21 +20,18 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module clk_en #(parameter N = 25000) (
+module clk_en #(parameter N = 10) (
     input sys_clk,
     input sys_rst_n,
     output logic clk_out
     );
 
-    int count;
-    initial begin 
-        count = 0;
-        clk_out = 0;
-    end
+    logic [31 : 0] count;
+    
     always_ff@(posedge sys_clk)
         if(count < N && sys_rst_n) count <= count + 1;
         else if(sys_rst_n && count <= N) count <= 0;
         else if(!sys_rst_n) count <= 0;
         
-    assign clk_out = (count == N-1)?(!clk_out):clk_out;
+    assign clk_out = (count == N-1)?(~clk_out):clk_out;
 endmodule

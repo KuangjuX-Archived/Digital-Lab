@@ -26,6 +26,7 @@ module x7seg_dec(
     );
     always@(*) begin 
         unique case(D)
+            4'd0: a_to_g = 8'b00111111;
             4'd1: a_to_g = 8'b00000110;
             4'd2: a_to_g = 8'b01011011;
             4'd3: a_to_g = 8'b01001111;
@@ -34,6 +35,7 @@ module x7seg_dec(
             4'd6: a_to_g = 8'b01111101;
             4'd7: a_to_g = 8'b00000111;
             4'd8: a_to_g = 8'b01111111;
+            4'd9: a_to_g = 8'b01101111;
         endcase
     end
     

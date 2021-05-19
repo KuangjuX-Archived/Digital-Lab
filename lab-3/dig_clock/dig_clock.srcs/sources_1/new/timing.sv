@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module timing #(parameter MAX_SEC = 59, MAX_MIN = 59, MAX_COUNT = 25000000) (
+module timing #(parameter MAX_SEC = 59, MAX_MIN = 59, MAX_COUNT = 10) (
     input sys_clk, 
     input sys_rst_n,
     input i_start,
@@ -29,9 +29,6 @@ module timing #(parameter MAX_SEC = 59, MAX_MIN = 59, MAX_COUNT = 25000000) (
     );
     
     int count;
-    initial begin
-        count = 0;
-    end
 
     always_ff@(posedge sys_clk)
         // reset 
