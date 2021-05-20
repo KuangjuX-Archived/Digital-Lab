@@ -51,10 +51,4 @@ module timing #(parameter MAX_SEC = 59, MAX_MIN = 59, MAX_COUNT = 10) (
             end
         end
 
-        // stop timing
-        else if(!i_start && sys_rst_n) begin 
-            sec <= sec;
-            min <= min;
-        end
-
 endmodule

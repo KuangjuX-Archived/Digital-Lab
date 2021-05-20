@@ -30,11 +30,16 @@ module x7seg_scan(
     output logic [3 : 0] an
     );
 
-    always_ff@(posedge clk_flag)
-        if(sys_rst_n) begin 
+    always_ff@(posedge sys_clk)
+        if(!sys_rst_n) begin 
+            an <= 4'd1;
+        end
+
+        else if(sys_rst_n && clk_flag) begin 
             if(an == 8) an <= 4'd1;
             else an <= (an << 1);
         end
+
     
     always@(*) begin 
         if(an == 1) x7seg_data = sec[3 : 0];
