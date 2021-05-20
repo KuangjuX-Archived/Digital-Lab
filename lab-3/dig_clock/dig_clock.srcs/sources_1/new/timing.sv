@@ -23,12 +23,18 @@
 module timing #(parameter MAX_SEC = 59, MAX_MIN = 59, MAX_COUNT = 10) (
     input sys_clk, 
     input sys_rst_n,
-    input i_start,
+    input start_flag,
     output logic [7:0] min,
     output logic [7:0] sec
     );
     
     int count;
+    logic state;
+   
+    always@(*) begin 
+        if(!sys_rst_n) state = 1'b0;
+        else if(start_flag == 1) state = ~state;
+    end
 
     always_ff@(posedge sys_clk)
         // reset 
@@ -38,7 +44,7 @@ module timing #(parameter MAX_SEC = 59, MAX_MIN = 59, MAX_COUNT = 10) (
         end
 
         // timing
-        else if(i_start && sys_rst_n) begin 
+        else if(state && sys_rst_n) begin 
             if (count < MAX_COUNT - 1) count <= count + 1;
             else if(count == MAX_COUNT - 1) begin  
                 count <= 0;

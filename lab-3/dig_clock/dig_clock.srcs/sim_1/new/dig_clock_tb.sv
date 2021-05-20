@@ -47,9 +47,9 @@ module dig_clock_tb();
         @(posedge sys_rst_n);
     @(posedge sys_clk);
 
-                repeat(50) begin
+                repeat(1000) begin
                     @(posedge sys_clk);
-                i_start <= 1;
+                i_start <= {$random}%2;
                 end 
         $finish;
     end

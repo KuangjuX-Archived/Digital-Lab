@@ -33,13 +33,13 @@ module DFF_N (
         if(sys_rst_n) begin 
             dff0_Q <= i_start;
             dff1_Q <= dff0_Q;
-            start_flag <= dff1_Q;
         end
         else if(!sys_rst_n) begin 
             dff0_Q <= 0;
             dff1_Q <= 0;
         end
-    // assign start_flag = (~dff1_Q)&dff0_Q;
+
+    assign start_flag = dff1_Q^dff0_Q;
 
 
 endmodule

@@ -13,7 +13,6 @@ module dig_clock(
     logic [7 : 0]   min, sec, bcd_min, bcd_sec;
     logic [3 : 0]   x7seg_data;
 
-
     clk_en U0(
         .sys_clk (sys_clk),
         .sys_rst_n (sys_rst_n),
@@ -30,7 +29,7 @@ module dig_clock(
     timing U2(
         .sys_clk (sys_clk),
         .sys_rst_n (sys_rst_n),
-        .i_start (start_flag),
+        .start_flag (start_flag),
         .min (min),
         .sec (sec)
     );
