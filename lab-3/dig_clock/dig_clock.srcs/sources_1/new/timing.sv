@@ -53,10 +53,11 @@ module timing #(parameter MAX_SEC = 59, MAX_MIN = 59, MAX_COUNT = 25000000) (
                     min <= min + 1;
                 end
                 else if(sec < MAX_SEC) sec <= sec + 1;
+                else if(min == MAX_MIN) min <= 0;
             end
         end
 
-        else begin
+        else if(!state) begin
             min <= min;
             sec <= sec;
         end

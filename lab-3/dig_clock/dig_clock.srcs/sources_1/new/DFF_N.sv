@@ -39,7 +39,7 @@ module DFF_N (
             dff1_Q <= 0;
         end
 
-    assign start_flag = (~dff1_Q)^dff0_Q;
+    assign start_flag = (~dff1_Q)&dff0_Q;
 
 
 endmodule
