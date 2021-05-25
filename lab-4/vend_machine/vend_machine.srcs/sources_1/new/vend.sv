@@ -3,15 +3,18 @@
 module vend(
     input sys_clk, sys_rst_n,
     input coin5, coin10,
-    output [3 : 0] an,
-    output [7 : 0] a_to_g,
-    output open
+    output logic [3 : 0] an,
+    output logic [7 : 0] a_to_g,
+    output logic open
     );
 
     logic clk_1MS;
     logic coin5_flag, coin10_flag;
     logic [7 : 0] coin5_cnt, coin10_cnt;
     logic [7 : 0] price, change;
+    logic [7 : 0] price_bcd, change_bcd;
+    logic [3 : 0] x7seg_data;
+    logic open_flag;
 
     clk_en U1(
         .sys_clk(sys_clk),
@@ -48,8 +51,49 @@ module vend(
         .coin5_cnt(coin5_cnt),
         .coin10_cnt(coin10_cnt),
         .price(price),
-        .change(change)
+        .change(change),
+        .open(open)
     );
+
+    bin2bcd_0 U6(
+        .bin(price),
+        .bcd(price_bcd)
+    );
+
+    bin2bcd_0 U7(
+        .bin(change),
+        .bcd(change_bcd)
+    );
+
+    x7seg_scan U8(
+        .sys_clk(sys_clk),
+        .sys_rst_n(sys_rst_n),
+        .clk_flag(clk_1MS),
+        .price(price_bcd),
+        .x7seg_data(x7seg_data),
+        .an(an)
+    );
+
+    x7seg_dec U9(
+        .D(x7seg_data),
+        .a_to_g(a_to_g)
+    );
+
+    edge_dete U10(
+        .sys_clk(sys_clk),
+        .sys_rst_n(sys_rst_n),
+        .i_start(open),
+        .start_flag(open_flag)
+    );
+
+    // sale_cnt U11(
+    //     .sys_clk(sys_clk),
+    //     .sys_rst_n(sys_rst_n),
+    //     .start_flag(open_flag),
+    //     .price(price),
+    //     .change(change),
+    //     .open(open)
+    // );
     
     
 endmodule
