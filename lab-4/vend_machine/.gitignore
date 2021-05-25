@@ -1,0 +1,5 @@
+vend_machine.cache/*
+vend_machine.hw/*
+vend_machine.ip_user_files/*
+vend_machine.runs/*
+vend_machine.sim/*
