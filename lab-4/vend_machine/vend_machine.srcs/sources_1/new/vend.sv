@@ -14,7 +14,7 @@ module vend(
     logic [7 : 0] price, change;
     logic [7 : 0] price_bcd, change_bcd;
     logic [3 : 0] x7seg_data;
-    logic open_flag;
+    logic reset_flag;
 
     clk_en U1(
         .sys_clk(sys_clk),
@@ -36,20 +36,19 @@ module vend(
         .start_flag(coin10_flag)
     );
 
-    // counter U4(
-    //     .sys_clk(sys_clk),
-    //     .sys_rst_n(sys_rst_n),
-    //     .coin5_flag(coin5_flag),
-    //     .coin10_flag(coin10_flag),
-    //     .coin5_cnt(coin5_cnt),
-    //     .coin10_cnt(coin10_cnt)
-    // );
+    sale_cnt U4(
+        .sys_clk(sys_clk),
+        .sys_rst_n(sys_rst_n),
+        .start_flag(open),
+        .state(reset_flag)
+    );
 
     FSM U5(
         .sys_clk(sys_clk),
         .sys_rst_n(sys_rst_n),
         .coin5_flag(coin5_flag),
         .coin10_flag(coin10_flag),
+        .reset_flag(reset_flag),
         .price(price),
         .change(change),
         .open(open)
