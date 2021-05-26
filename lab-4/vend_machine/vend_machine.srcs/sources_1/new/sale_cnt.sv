@@ -34,12 +34,16 @@ module sale_cnt #(parameter MAX_CNT = 250000000)(
             cnt <= 0;
             state <= 0;
         end
-        else begin
+        else if(start_flag) begin
            if(cnt < MAX_CNT - 1) cnt <= cnt + 1;
            else begin
                 cnt <= 0;
                 state <= 1;
            end
+        end
+        else if(!start_flag) begin
+            cnt <= 0;
+            state <= 0;
         end
     end
 

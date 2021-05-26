@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module FSM #(parameter MAX_CNT = 250000000)(
+module FSM (
     input sys_clk,
     input sys_rst_n,
     input coin5_flag,
@@ -74,7 +74,7 @@ module FSM #(parameter MAX_CNT = 250000000)(
         end
     end
 
-    always_ff@(*) begin
+    always@(*) begin
         if(!sys_rst_n) begin
             price = 8'd0;
             change = 8'd0;
