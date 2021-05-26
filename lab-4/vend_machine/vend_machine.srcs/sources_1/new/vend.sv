@@ -36,20 +36,20 @@ module vend(
         .start_flag(coin10_flag)
     );
 
-    counter U4(
-        .sys_clk(sys_clk),
-        .sys_rst_n(sys_rst_n),
-        .coin5_flag(coin5_flag),
-        .coin10_flag(coin10_flag),
-        .coin5_cnt(coin5_cnt),
-        .coin10_cnt(coin10_cnt)
-    );
+    // counter U4(
+    //     .sys_clk(sys_clk),
+    //     .sys_rst_n(sys_rst_n),
+    //     .coin5_flag(coin5_flag),
+    //     .coin10_flag(coin10_flag),
+    //     .coin5_cnt(coin5_cnt),
+    //     .coin10_cnt(coin10_cnt)
+    // );
 
     FSM U5(
         .sys_clk(sys_clk),
         .sys_rst_n(sys_rst_n),
-        .coin5_cnt(coin5_cnt),
-        .coin10_cnt(coin10_cnt),
+        .coin5_flag(coin5_flag),
+        .coin10_flag(coin10_flag),
         .price(price),
         .change(change),
         .open(open)
@@ -78,22 +78,5 @@ module vend(
         .D(x7seg_data),
         .a_to_g(a_to_g)
     );
-
-    edge_dete U10(
-        .sys_clk(sys_clk),
-        .sys_rst_n(sys_rst_n),
-        .i_start(open),
-        .start_flag(open_flag)
-    );
-
-    // sale_cnt U11(
-    //     .sys_clk(sys_clk),
-    //     .sys_rst_n(sys_rst_n),
-    //     .start_flag(open_flag),
-    //     .price(price),
-    //     .change(change),
-    //     .open(open)
-    // );
-    
-    
+  
 endmodule
