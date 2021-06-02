@@ -1,0 +1,6 @@
+[submodule "Mini-Mips32"]
+	path = Mini-Mips32
+	url = git@github.com:KuangjuX/Mini-Mips32.git
+[submodule "lab-5/Mini-Mips32"]
+	path = lab-5/Mini-Mips32
+	url = git@github.com:KuangjuX/Mini-Mips32.git

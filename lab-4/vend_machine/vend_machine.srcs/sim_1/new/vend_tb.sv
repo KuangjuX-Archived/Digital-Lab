@@ -46,7 +46,9 @@ module vend_tb();
         #100;
         sys_rst_n <= 1'b1;
         #105;
-        coin5 = 1;
+        coin5 <= 1;
+        #115;
+        coin10 <= 1;
     end
 
     always #(`CLK_PERIOD/2) sys_clk = ~sys_clk;
